@@ -1,0 +1,37 @@
+{
+    "postData": [
+        {
+            "title": "Inspirational Quotes.....What's your favorite one...?",
+            "content": "You have to expect things of yourself before you can do them.....",
+            "comments": [
+                {
+                    "text": "If you want the rainbow you have to put up with the rain."
+                },
+                {
+                    "text": "You do not find the happy life. You make it."
+                },
+                {
+                    "text": "Every moment is fresh beginnning."
+                }
+            ]
+        },
+        {
+            "title": "What makes you happy?",
+            "content": "Everyone wants a happy life, the ultimate goal of almost all the things they do is to make themselves happy....But sadly in the process they forget that chasing after the ultimate goal of happiness they forget the basic principal of staying happy in the very moment. So lets take this moment and share our own happy moments in life..",
+            "comments": [
+                {
+                    "text": "When I saw snow for the first time, that made me happy :)"
+                },
+                {
+                    "text": "When I travelled alone for the first time, that made me happy."
+                },
+                {
+                    "text": "When I got my first salary."
+                },
+                {
+                    "text": "When I ate maggie with my siblings at terrace at night."
+                }
+            ]
+        }
+    ]
+}

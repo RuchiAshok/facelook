@@ -1,0 +1,121 @@
+{
+    "usersData": [
+        {
+            "userId": 1,
+            "userName": "Puja Gupta",
+            "userEmail": "puja@gmail.com",
+            "userMobile": "80145432165",
+            "userPassword": "Ruc12345",
+            "userTag": "M",
+            "userApproved": "N"
+        },
+        {
+            "userId": 2,
+            "userName": "Anuneha",
+            "userEmail": "anu@gmail.com",
+            "userMobile": "78145432165",
+            "userPassword": "Anu12345",
+            "userTag": "M",
+            "userApproved": "N"
+        },
+        {
+            "userId": 3,
+            "userName": "Khusu",
+            "userEmail": "khus@gmail.com",
+            "userMobile": "6784512345",
+            "userPassword": "Khusu12345",
+            "userTag": "M",
+            "userApproved": "Y"
+        },
+        {
+            "userId": 4,
+            "userName": "Rajat Bhardwaj",
+            "userEmail": "rajat@gmail.com",
+            "userMobile": "8679345672",
+            "userPassword": "Rajat12345",
+            "userTag": "M",
+            "userApproved": "Y"
+        },
+        {
+            "userId": 5,
+            "userName": "Atul Gupta",
+            "userEmail": "atul@gmail.com",
+            "userMobile": "637486527843",
+            "userPassword": "12345",
+            "userTag": "M",
+            "userApproved": "Y"
+        },
+        {
+            "userId": 6,
+            "userName": "Aashu Gupta",
+            "userEmail": "aashu@gmail.com",
+            "userMobile": "732478567454",
+            "userPassword": "12345",
+            "userTag": "M",
+            "userApproved": "N"
+        },
+        {
+            "userId": 7,
+            "userName": "Archana Gupta",
+            "userEmail": "arachana@gmail.com",
+            "userMobile": "38275438578",
+            "userPassword": "hjs",
+            "userTag": "M",
+            "userApproved": "Y"
+        },
+        {
+            "userId": 8,
+            "userName": "MyName",
+            "userEmail": "",
+            "userMobile": "",
+            "userPassword": "12345",
+            "userTag": "M",
+            "userApproved": "Y"
+        },
+        {
+            "userId": 9,
+            "userName": "Ruchi",
+            "userEmail": "ruc@12345",
+            "userMobile": "789746374",
+            "userPassword": "ruc",
+            "userTag": "M",
+            "userApproved": "Y"
+        },
+        {
+            "userId": 10,
+            "userName": "Yahoo",
+            "userEmail": "",
+            "userMobile": "",
+            "userPassword": "12",
+            "userTag": "M",
+            "userApproved": "Y"
+        },
+        {
+            "userId": 11,
+            "userName": "Rahi",
+            "userEmail": "",
+            "userMobile": "",
+            "userPassword": "",
+            "userTag": "M",
+            "userApproved": "Y"
+        },
+        {
+            "userId": 12,
+            "userName": "Hello Worla",
+            "userEmail": "",
+            "userMobile": "",
+            "userPassword": "jhj",
+            "userTag": "M",
+            "userApproved": "Y"
+        },
+        {
+            "userId": 13,
+            "userName": "Kqa",
+            "userEmail": "hj",
+            "userMobile": "hjhjh",
+            "userPassword": "jhhj",
+            "userTag": "M",
+            "userApproved": "Y"
+        }
+    ]
+}
