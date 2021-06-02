@@ -1,5 +1,5 @@
 var fs = require("fs");
-
+//hb
 module.exports =function(req,res){
     let rawdata = fs.readFileSync('./userData.json');
     let data = JSON.parse(rawdata);
