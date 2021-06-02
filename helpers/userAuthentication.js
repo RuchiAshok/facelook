@@ -6,7 +6,7 @@ var {
     jwtKey
 } = require('/Users/pujag/Node JS Application/myapp/config/authKey');
 
-//Hello 
+
 
 function verifyJWT(token) {
     return new Promise(function (resolve, reject) {
