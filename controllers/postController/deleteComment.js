@@ -1,21 +1,13 @@
-var fs = require("fs");
-var jwt = require('jsonwebtoken');
+var readPostDataController = require('/Users/pujag/Node JS Application/myapp/helpers/readPostData');
+var writePostDataController = require('/Users/pujag/Node JS Application/myapp/helpers/writePostData');
 
-module.exports = function (req, res, next) {
+module.exports = async function (req, res, next) {
     let {pIndex,cIndex} = req.body;   
     let i= parseInt(pIndex); 
-      let rawdata = fs.readFileSync('./postData.json');
-      let data = JSON.parse(rawdata);
+      let data = await readPostDataController();
+
       data.postData[i].comments.splice(cIndex,1);
 
-        fs.writeFile("./postData.json", JSON.stringify(data, null, 4), (err) => {
-          if (err) {
-               console.error(err);
-               return;
-           };
-           console.log("Comment has been deleted successfully");
-           let rawdataNew = fs.readFileSync('./postData.json');
-           let dataNew = JSON.parse(rawdataNew);
-           res.json(dataNew.postData);
-        });       
+      let dataNew = await writePostDataController(data);
+      res.json(dataNew.postData);          
 }

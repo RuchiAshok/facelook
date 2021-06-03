@@ -1,4 +1,3 @@
-var fs = require("fs");
 var readUserDataController = require('/Users/pujag/Node JS Application/myapp/helpers/readUserData');
 var writeUserDataController = require('/Users/pujag/Node JS Application/myapp/helpers/writeUserData');
 

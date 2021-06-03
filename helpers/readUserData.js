@@ -17,9 +17,10 @@ module.exports = async function readUser() {
             console.log(err); //err = Could not create JWT (will be here)
             return null;
         });
+     //   console.log(userData);
         return (userData);
     } catch (err) {
-        console.log('error while reading file data');
+        console.log('error while finding user datas');
         return (null);
     }
 };

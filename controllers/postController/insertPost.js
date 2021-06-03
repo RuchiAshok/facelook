@@ -1,7 +1,7 @@
-var fs = require("fs");
-var jwt = require('jsonwebtoken');
+var readPostDataController = require('/Users/pujag/Node JS Application/myapp/helpers/readPostData');
+var writePostDataController = require('/Users/pujag/Node JS Application/myapp/helpers/writePostData');
 
-module.exports = function (req, res, next) {
+module.exports = async function (req, res, next) {
 
     let {newTitle,newContent} = req.body;   
     var newObject = {
@@ -9,20 +9,8 @@ module.exports = function (req, res, next) {
         content: newContent,
         comments:[],
     };
-    console.log(newObject); 
-      let rawdata = fs.readFileSync('./postData.json');
-      let data = JSON.parse(rawdata);
-      console.log(data);
+      let data = await readPostDataController();
       data.postData.push(newObject);
-      fs.writeFile("./postData.json", JSON.stringify(data, null, 4), (err) => {
-         if (err) {
-              console.error(err);
-              return;
-          };
-          console.log("File has been created successfully");
-          let rawdataNew = fs.readFileSync('./postData.json');
-          let dataNew = JSON.parse(rawdataNew);
-          res.json(dataNew);
-       });
-
+      let dataNew = await writePostDataController(data);
+      res.json(dataNew);
 }

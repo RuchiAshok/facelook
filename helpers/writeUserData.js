@@ -1,5 +1,4 @@
 var fs = require("fs");
-//var readUserDataController = require('/Users/pujag/Node JS Application/myapp/helpers/readUserData');
 
 module.exports = async function writeUser(data) {
     try {
@@ -9,7 +8,7 @@ module.exports = async function writeUser(data) {
                      console.error(err);
                      return;
                  };
-                 console.log("Member has been approved Successfully");
+                 console.log("File has been written Successfully");
                  resolve(data);
               });       
         }).then(function (data) {

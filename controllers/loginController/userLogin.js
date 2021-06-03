@@ -1,3 +1,5 @@
+
+
 var createTokenController = require('/Users/pujag/Node JS Application/myapp/helpers/userAuthentication');
 var readUserDataController = require('/Users/pujag/Node JS Application/myapp/helpers/readUserData');
 
@@ -19,6 +21,5 @@ module.exports = async function (req, res, next) {
         token = await createTokenController.createJWT(userName);
         object = {...object, jwtToken:token, message:'Valid User'};
     }
-      console.log(object);
       res.send(object);
 }
