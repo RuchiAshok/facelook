@@ -1,8 +1,5 @@
-const { response } = require('express');
 var express = require('express');
 var router = express.Router();
-var jwt = require('jsonwebtoken');
-var fs = require("fs");
 const connection = require('../utilities/db');
 var getPostController = require('../controllers/postController/getPost');
 var insertPostController = require('../controllers/postController/insertPost');

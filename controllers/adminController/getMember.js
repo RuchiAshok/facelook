@@ -1,8 +1,7 @@
-var fs = require("fs");
-//hb
-module.exports =function(req,res){
-    let rawdata = fs.readFileSync('./userData.json');
-    let data = JSON.parse(rawdata);
+var readUserDataController = require('/Users/pujag/Node JS Application/myapp/helpers/readUserData')
+
+module.exports =async function(req,res){
+    let data = await readUserDataController();
     let newData = data.usersData.filter((element,index_no) =>element.userApproved !='Y');
     res.json(newData);  
    }

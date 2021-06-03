@@ -1,5 +1,3 @@
-var express = require('express');
-var router = express.Router();
 var fs = require("fs");
 var jwt = require('jsonwebtoken');
 var {jwtKey} = require('/Users/pujag/Node JS Application/myapp/config/authKey');
@@ -55,11 +53,6 @@ function verifyJWT_second(token) {
 
     })
 }
-
-
-
-
-
 
 
 async function createJWT(userName) {

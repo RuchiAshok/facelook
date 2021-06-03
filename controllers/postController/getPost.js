@@ -1,8 +1,7 @@
-var fs = require("fs");
+var readPostDataController = require('/Users/pujag/Node JS Application/myapp/helpers/readPostData');
 
-module.exports = function (req, res, next) {
-  let rawdata = fs.readFileSync('./postData.json');
-  let data = JSON.parse(rawdata);
-  res.json(data.postData);   
+module.exports = async function (req, res, next) {
+  let data = await readPostDataController();
+  res.json(data.postData); 
 }
 

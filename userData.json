@@ -7,7 +7,7 @@
             "userMobile": "80145432165",
             "userPassword": "Ruc12345",
             "userTag": "M",
-            "userApproved": "N"
+            "userApproved": "Y"
         },
         {
             "userId": 2,
@@ -16,7 +16,7 @@
             "userMobile": "78145432165",
             "userPassword": "Anu12345",
             "userTag": "M",
-            "userApproved": "N"
+            "userApproved": "Y"
         },
         {
             "userId": 3,
@@ -43,7 +43,7 @@
             "userMobile": "637486527843",
             "userPassword": "12345",
             "userTag": "M",
-            "userApproved": "Y"
+            "userApproved": "N"
         },
         {
             "userId": 6,
@@ -52,7 +52,7 @@
             "userMobile": "732478567454",
             "userPassword": "12345",
             "userTag": "M",
-            "userApproved": "Y"
+            "userApproved": "N"
         },
         {
             "userId": 7,
@@ -65,57 +65,12 @@
         },
         {
             "userId": 8,
-            "userName": "MyName",
-            "userEmail": "",
-            "userMobile": "",
-            "userPassword": "12345",
+            "userName": "Puja Gupta",
+            "userEmail": "khj",
+            "userMobile": "mnn",
+            "userPassword": "kjk",
             "userTag": "M",
-            "userApproved": "Y"
-        },
-        {
-            "userId": 9,
-            "userName": "Ruchi",
-            "userEmail": "ruc@12345",
-            "userMobile": "789746374",
-            "userPassword": "ruc",
-            "userTag": "M",
-            "userApproved": "Y"
-        },
-        {
-            "userId": 10,
-            "userName": "Yahoo",
-            "userEmail": "",
-            "userMobile": "",
-            "userPassword": "12",
-            "userTag": "M",
-            "userApproved": "Y"
-        },
-        {
-            "userId": 11,
-            "userName": "Rahi",
-            "userEmail": "",
-            "userMobile": "",
-            "userPassword": "",
-            "userTag": "M",
-            "userApproved": "Y"
-        },
-        {
-            "userId": 12,
-            "userName": "Hello Worla",
-            "userEmail": "",
-            "userMobile": "",
-            "userPassword": "jhj",
-            "userTag": "M",
-            "userApproved": "Y"
-        },
-        {
-            "userId": 13,
-            "userName": "Kqa",
-            "userEmail": "hj",
-            "userMobile": "hjhjh",
-            "userPassword": "jhhj",
-            "userTag": "M",
-            "userApproved": "Y"
+            "userApproved": "N"
         }
     ]
 }
