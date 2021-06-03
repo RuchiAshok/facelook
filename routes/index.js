@@ -23,7 +23,4 @@ router.get('/getMember',[verifyJWTMiddleWare], getMemberController);
 /*Approve Member - Single and in bulk*/
 router.post('/approveMember',[verifyJWTMiddleWare], approveMemberController);
 
-
-
-
 module.exports = router;

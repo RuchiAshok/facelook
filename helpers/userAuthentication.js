@@ -2,11 +2,7 @@ var express = require('express');
 var router = express.Router();
 var fs = require("fs");
 var jwt = require('jsonwebtoken');
-var {
-    jwtKey
-} = require('/Users/pujag/Node JS Application/myapp/config/authKey');
-
-//Hello 
+var {jwtKey} = require('/Users/pujag/Node JS Application/myapp/config/authKey');
 
 function verifyJWT(token) {
     return new Promise(function (resolve, reject) {
@@ -78,7 +74,7 @@ async function createJWT(userName) {
                 resolve(token);
             });
         }).then(function (token) {
-          //  res.send(token);
+          //  res.send(token);      : you need to return the res.send(token) always
             return token
         }).catch(function (err) {
             console.log('error while creating Token');
@@ -86,8 +82,6 @@ async function createJWT(userName) {
             return null;
         });
         return (jwtToken);
-        // console.log(jwtToken);
-
     } catch (err) {
         console.log('error while creating Token');
         return (null);

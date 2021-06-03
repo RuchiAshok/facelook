@@ -7,10 +7,8 @@ module.exports = function (req, res, next) {
       console.log(index);
         let rawdata = fs.readFileSync('./postData.json');
         let data = JSON.parse(rawdata);
-       // console.log(data.postData.length);
         data.postData.splice(index,1);
-       // console.log(data.postData);
- 
+         
           fs.writeFile("./postData.json", JSON.stringify(data, null, 4), (err) => {
             if (err) {
                  console.error(err);
