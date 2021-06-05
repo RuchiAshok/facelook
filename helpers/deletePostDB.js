@@ -9,7 +9,7 @@ module.exports = async function deletePostDB(postId) {
              throw err;    
 
              
-
+             console.log(result.affectedRows + " record(s) deleted");
              console.log("1 post deleted");
              resolve(true); 
           });

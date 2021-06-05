@@ -18,41 +18,7 @@
                     "content": "Every moment is fresh beginnning."
                 }
             ]
-        },
-        {
-            "postId": 2,
-            "title": "What makes you happy?",
-            "content": "Everyone wants a happy life, the ultimate goal of almost all the things they do is to make themselves happy....But sadly in the process they forget that chasing after the ultimate goal of happiness they forget the basic principal of staying happy in the very moment. So lets take this moment and share our own happy moments in life..",
-            "comments": [
-                {
-                    "commentId": 1,
-                    "content": "When I saw snow for the first time, that made me happy :)"
-                },
-                {
-                    "commentId": 2,
-                    "content": "When I travelled alone for the first time, that made me happy."
-                },
-                {
-                    "commentId": 3,
-                    "content": "When I got my first salary."
-                },
-                {
-                    "commentId": 4,
-                    "content": "When I ate maggie with my siblings at terrace at night."
-                }
-            ]
-        },
-        {
-            "postId": 3,
-            "title": "Hello",
-            "content": "Its me Puja",
-            "comments": []
-        },
-        {
-            "postId": 5,
-            "title": "jhdshj",
-            "content": "kjkj",
-            "comments": []
         }
+       
     ]
 }

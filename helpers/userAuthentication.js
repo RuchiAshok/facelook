@@ -1,21 +1,29 @@
 var fs = require("fs");
 var jwt = require('jsonwebtoken');
 var {jwtKey} = require('/Users/pujag/Node JS Application/myapp/config/authKey');
+let userAuthController = require('../helpers/readLoginUser');
 
 function verifyJWT(token) {
     return new Promise(function (resolve, reject) {
-        jwt.verify(token, jwtKey, function (err, decoded) {
+        jwt.verify(token, jwtKey, async function (err, decoded) {
             if (err) {
                 throw new Error('Could not decode JWT')
             }
 
-            let userData = fs.readFileSync('./userData.json');
-            let data = JSON.parse(userData);
-            //If any of the condition is satisfied, it return true, wont check further (some/all)
-            let userFound = data.usersData.some((user) => {
-                return user.userName == decoded.userName
-            })
-            resolve(userFound);
+            let userFoundDB = await userAuthController(decoded.userName,'','user_auth');
+            console.log('authentication');
+            console.log(decoded.userName);
+            console.log (userFoundDB);
+            
+            resolve (userFoundDB);
+
+            // let userData = fs.readFileSync('./userData.json');
+            // let data = JSON.parse(userData);
+            // //If any of the condition is satisfied, it return true, wont check further (some/all)
+            // let userFound = data.usersData.some((user) => {
+            //     return user.userName == decoded.userName
+            // })
+            // resolve(userFound);
 
         })
     }).then(function (userFound) {

@@ -13,7 +13,7 @@ const verifyJWTMiddleWare = require('../middleware/auth.js')
   router.get('/getPost',[verifyJWTMiddleWare],getPostController);
 
   /*To get Comment Data*/
-  router.post('/getComment',getCommentController);
+  router.post('/getComment',[verifyJWTMiddleWare],getCommentController);
 
  /*To insert new Post*/
   router.post('/insertPost',[verifyJWTMiddleWare],insertPostController);

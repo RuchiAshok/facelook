@@ -19,7 +19,6 @@ module.exports = async function readCommentDB(postId,type) {
                     
                     if(result.length ==0) 
                     reject('No comment found');
-                    console.log(result);
                     resolve(result);  
                   });
             }  

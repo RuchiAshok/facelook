@@ -1,17 +1,30 @@
 var fs = require("fs");
 const connection =require('../utilities/db.js');
 
-module.exports = async function readLoginDB(userName, userPassword) {
+module.exports = async function readLoginDB(userName, userPassword, type) {
     try {
         let userData = await new Promise(function (resolve, reject) {      
-            connection.query(`SELECT * FROM PostUsers where userName = '${userName}' and userPassword ='${userPassword}'`, function (err, result, fields) {       
-            if (err)
-             throw err;    
+            if(type = 'user_auth'){
+                connection.query(`SELECT * FROM PostUsers where userName = '${userName}'`, function (err, result, fields) {       
+                    if (err)
+                     throw err;    
+        
+                    if(result.length ==0) 
+                    reject(false);
 
-            if(result.length ==0) 
-            reject(false);
-            resolve(true);  
-          });
+                    resolve(true);  
+                  });
+            }else{
+                connection.query(`SELECT * FROM PostUsers where userName = '${userName}' and userPassword ='${userPassword}'`, function (err, result, fields) {       
+                    if (err)
+                     throw err;    
+        
+                    if(result.length ==0) 
+                    reject(false);
+                    resolve(true);  
+                  });
+            }
+            
         }).then(function (data) {
             return data
         }).catch(function (err) {

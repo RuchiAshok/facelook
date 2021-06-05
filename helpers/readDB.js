@@ -1,4 +1,3 @@
-var fs = require("fs");
 const connection =require('../utilities/db.js');
 
 module.exports = async function readDB(type) {

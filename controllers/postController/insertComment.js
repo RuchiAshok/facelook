@@ -5,35 +5,31 @@ var insertCommentDBController = require('../../helpers/insertCommentDB');
 
 
 module.exports = async function (req, res, next) {
-  let {index,commentData} = req.body; 
-  let postId= parseInt(index);
-  
-  let comment = await readCommentDBController(postId);
-  console.log(comment);
- 
-  let commentId= 1;
+  let {postId,commentData} = req.body;
+  let postId1 = parseInt(postId);
 
-    if(comment !=null || comment !=undefined){
-        let CommentCount = comment.length;
-        commentId = parseInt(CommentCount)+1;
-        console.log(commentId);
-    }
+  console.log('postid' + postId1);
+  let commentInsert = await insertCommentDBController(postId1, commentData);
+  console.log(commentInsert);
 
-    console.log('postid'+ postId);
-    console.log('commentid'+ commentId);
-    let commentInsert = await insertCommentDBController(postId,commentData);
-    console.log(commentInsert);
-  
-  var newObject = {
-    commentId:commentId,
-    content:commentData
-};
+  if (commentInsert) {
 
-    let data = await readPostDataController();
-    data.postData[postId].comments.push(newObject);
-    
-    let dataNew = await writePostDataController(data);
-    res.json(dataNew.postData);   
+  }
+
+  let cData = null;
+
+  let commentData1 = await readCommentDBController(postId);
+  if (commentData != null) {
+    cData = JSON.parse(JSON.stringify(commentData1));
+    console.log(cData);
+  }
+  res.json(cData);
+
+  // let data = await readPostDataController();
+  // data.postData[postId].comments.push(newObject);
+
+  // let dataNew = await writePostDataController(data);
+  // res.json(dataNew.postData);   
 }
 
 // module.exports = async function (req, res, next) {
@@ -45,7 +41,7 @@ module.exports = async function (req, res, next) {
 
 //       let data = await readPostDataController();
 //       data.postData[i].comments.push(newObject);
-      
+
 //       let dataNew = await writePostDataController(data);
 //       res.json(dataNew.postData);   
 // }
