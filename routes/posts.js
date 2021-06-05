@@ -6,10 +6,14 @@ var insertPostController = require('../controllers/postController/insertPost');
 var deletePostController = require('../controllers/postController/deletePost');
 var insertCommentController = require('../controllers/postController/insertComment');
 var deleteCommentController = require('../controllers/postController/deleteComment');
+var getCommentController = require('../controllers/postController/getComment');
 const verifyJWTMiddleWare = require('../middleware/auth.js')
 
  /*To get Post Data*/
   router.get('/getPost',[verifyJWTMiddleWare],getPostController);
+
+  /*To get Comment Data*/
+  router.post('/getComment',getCommentController);
 
  /*To insert new Post*/
   router.post('/insertPost',[verifyJWTMiddleWare],insertPostController);

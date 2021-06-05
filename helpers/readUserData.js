@@ -5,7 +5,8 @@ module.exports = async function readUser() {
         let userData = await new Promise(function (resolve, reject) {
           fs.readFile('./userData.json', function (err, data) {
                 if (err) {
-                  return console.log(err);
+                    
+                  reject (err);
                 }
                 resolve(JSON.parse(data));
 

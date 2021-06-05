@@ -80,6 +80,15 @@
             "userPassword": "",
             "userTag": "M",
             "userApproved": "Y"
+        },
+        {
+            "userId": 10,
+            "userName": "Arun",
+            "userEmail": "",
+            "userMobile": "",
+            "userPassword": "kj",
+            "userTag": "M",
+            "userApproved": "N"
         }
     ]
 }
