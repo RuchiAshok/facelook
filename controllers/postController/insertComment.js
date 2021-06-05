@@ -23,13 +23,7 @@ module.exports = async function (req, res, next) {
     cData = JSON.parse(JSON.stringify(commentData1));
     console.log(cData);
   }
-  res.json(cData);
-
-  // let data = await readPostDataController();
-  // data.postData[postId].comments.push(newObject);
-
-  // let dataNew = await writePostDataController(data);
-  // res.json(dataNew.postData);   
+  res.json(cData); 
 }
 
 // module.exports = async function (req, res, next) {

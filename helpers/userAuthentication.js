@@ -14,17 +14,7 @@ function verifyJWT(token) {
             console.log('authentication');
             console.log(decoded.userName);
             console.log (userFoundDB);
-            
             resolve (userFoundDB);
-
-            // let userData = fs.readFileSync('./userData.json');
-            // let data = JSON.parse(userData);
-            // //If any of the condition is satisfied, it return true, wont check further (some/all)
-            // let userFound = data.usersData.some((user) => {
-            //     return user.userName == decoded.userName
-            // })
-            // resolve(userFound);
-
         })
     }).then(function (userFound) {
         return userFound

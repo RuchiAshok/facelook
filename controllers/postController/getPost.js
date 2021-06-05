@@ -1,4 +1,3 @@
-var readPostDataController = require('/Users/pujag/Node JS Application/myapp/helpers/readPostData');
 var readPostDBController = require('../../helpers/readPostDB');
 
 module.exports = async function (req, res, next) {
@@ -14,9 +13,3 @@ module.exports = async function (req, res, next) {
   }
    res.json(postData); 
 }
-
-
-// module.exports = async function (req, res, next) {
-//   let data = await readPostDataController();
-//   res.json(data.postData); 
-// }

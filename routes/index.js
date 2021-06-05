@@ -17,7 +17,6 @@ router.post('/memberRegister', userRegisterController);
 
 /* Get Member Pending for Approval */
  router.get('/getMember',[verifyJWTMiddleWare], getMemberController);
-//router.get('/getMember', getMemberController);
 
 /*Approve Member - Single and in bulk*/
 router.post('/approveMember',[verifyJWTMiddleWare], approveMemberController);

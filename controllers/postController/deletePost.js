@@ -1,6 +1,3 @@
-
-var readPostDataController = require('/Users/pujag/Node JS Application/myapp/helpers/readPostData');
-var writePostDataController = require('/Users/pujag/Node JS Application/myapp/helpers/writePostData');
 var deletePostDBController = require('../../helpers/deletePostDB');
 var deleteCommentDBController = require('../../helpers/deleteCommentDB');
 var readPostDBController = require('../../helpers/readPostDB');

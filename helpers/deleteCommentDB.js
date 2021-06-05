@@ -1,4 +1,3 @@
-
 const connection =require('../utilities/db.js');
 
 module.exports = async function deleteCommentDB(postId,commentId,type) {
