@@ -14,7 +14,8 @@ module.exports = async function readDB(type) {
 
                     resolve(result);  
                   });
-            }else{
+            }
+            else{
                 connection.query(`SELECT * FROM PostUsers`, function (err, result, fields) {   
                     if (err)
                      throw err;

@@ -1,9 +1,9 @@
 const connection = require('../utilities/db.js');
 
-module.exports = async function writeCommentDB(postId, newComment) {
+module.exports = async function writeCommentDB(postId, newComment,userId) {
     try {
         let postData = await new Promise(function (resolve, reject) {
-            var sql = `INSERT INTO Comments( postId,content) VALUES  (${postId},'${newComment}')`;
+            var sql = `INSERT INTO Comments( postId,content,userId) VALUES  (${postId},'${newComment}',${userId})`;
             connection.query(sql, function (err, result) {
                 if (err) throw err;
 

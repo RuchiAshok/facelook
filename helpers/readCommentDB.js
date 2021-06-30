@@ -5,7 +5,8 @@ module.exports = async function readCommentDB(postId,type) {
         let commentData = await new Promise(function (resolve, reject) {
             if(type =='all'){
                 // connection.query(`SELECT * FROM Comments`, function (err, result, fields) {   
-                    connection.query(`select comments.commentId,comments.postId,comments.userId,comments.content,comments.createdOn,postUsers.userName 
+                    connection.query(`select comments.commentId,comments.postId,comments.userId,
+                    comments.content,comments.createdOn,postUsers.userName,postUsers.genderTag
                     from comments left join postUsers on comments.userId = postUsers.userId`, function (err, result, fields) {  
                     if (err)
                      throw err;
@@ -16,7 +17,8 @@ module.exports = async function readCommentDB(postId,type) {
                   });
             }else{
                 // connection.query(`SELECT * FROM Comments where postId = ${postId}`, function (err, result, fields) {   
-                    connection.query(`select comments.commentId,comments.postId,comments.userId,comments.content,comments.createdOn,postUsers.userName 
+                    connection.query(`select comments.commentId,comments.postId,comments.userId,
+                    comments.content,comments.createdOn,postUsers.userName,postUsers.genderTag
                     from comments left join postUsers on comments.userId = postUsers.userId where comments.postId = ${postId}`, function (err, result, fields) { 
                     if (err)
                      throw err;

@@ -10,7 +10,7 @@ module.exports = async function (req, res, next) {
   let commentData = await readCommentDBController(postId1);
   if (commentData != null) {
     cData = JSON.parse(JSON.stringify(commentData));
-    console.log(cData);
+    // console.log(cData);
   }
   res.json(cData);
 }

@@ -13,8 +13,12 @@ module.exports = async function (req, res, next) {
         message:'Invalid User Credentials'
     }
     if(userFound){
+        let type ="userData";
+        let userDetails = await readUserDBController(userName,userPassword,type);
+        let data =  JSON.parse(JSON.stringify(userDetails));
+       // console.log(data);
         token = await createTokenController.createJWT(userName);
-        object = {...object, jwtToken:token, message:'Valid User'};
+        object = {...object, jwtToken:token, message:'Valid User',userDetails:data[0]};
     }
       res.send(object);
 }

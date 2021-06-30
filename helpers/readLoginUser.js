@@ -3,21 +3,28 @@ const connection =require('../utilities/db.js');
 module.exports = async function readLoginDB(userName, userPassword, type) {
     try {
         let userData = await new Promise(function (resolve, reject) {      
-            if(type = 'user_auth'){
+            if(type === 'user_auth'){
                 connection.query(`SELECT * FROM PostUsers where userName = '${userName}'`, function (err, result, fields) {       
                     if (err)
-                     throw err;    
-        
+                     throw err;          
                     if(result.length ==0) 
                     reject(false);
-
                     resolve(true);  
                   });
-            }else{
+            }
+            if(type === 'userData'){
+                connection.query(`SELECT userId,userName,userEmail,userMobile,genderTag FROM PostUsers where userName = '${userName}'and userPassword ='${userPassword}'`, function (err, result, fields) {       
+                    if (err)
+                     throw err;          
+                    if(result.length ==0) 
+                    reject(false);
+                    resolve(result);  
+                  });
+            }
+            else{
                 connection.query(`SELECT * FROM PostUsers where userName = '${userName}' and userPassword ='${userPassword}'`, function (err, result, fields) {       
                     if (err)
                      throw err;    
-        
                     if(result.length ==0) 
                     reject(false);
                     resolve(true);  

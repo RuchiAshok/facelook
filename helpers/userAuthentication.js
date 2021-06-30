@@ -11,9 +11,9 @@ function verifyJWT(token) {
             }
 
             let userFoundDB = await userAuthController(decoded.userName,'','user_auth');
-            console.log('authentication');
-            console.log(decoded.userName);
-            console.log (userFoundDB);
+            // console.log('authentication');
+            // console.log(decoded.userName);
+            // console.log (userFoundDB);
             resolve (userFoundDB);
         })
     }).then(function (userFound) {

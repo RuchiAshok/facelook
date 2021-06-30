@@ -5,11 +5,11 @@ var insertCommentDBController = require('../../helpers/insertCommentDB');
 
 
 module.exports = async function (req, res, next) {
-  let {postId,commentData} = req.body;
+  let {postId,commentData,userId} = req.body;
   let postId1 = parseInt(postId);
 
   console.log('postid' + postId1);
-  let commentInsert = await insertCommentDBController(postId1, commentData);
+  let commentInsert = await insertCommentDBController(postId1, commentData,userId);
   console.log(commentInsert);
 
   if (commentInsert) {

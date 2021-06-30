@@ -1,9 +1,9 @@
 const connection =require('../utilities/db.js');
 
-module.exports = async function writePostDB(newTitle,newContent) {
+module.exports = async function writePostDB(newTitle,newContent,userId) {
     try {
         let postData = await new Promise(function (resolve, reject) { 
-            var sql = `INSERT INTO Posts(title, content) VALUES  ('${newTitle}', '${newContent}')`;
+            var sql = `INSERT INTO Posts(title, content,userId) VALUES  ('${newTitle}', '${newContent}',${userId})`;
             connection.query(sql, function (err, result) {
               if (err) throw err;
 
