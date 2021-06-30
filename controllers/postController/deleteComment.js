@@ -8,6 +8,7 @@ module.exports = async function (req, res, next) {
   let {postId,commentId} = req.body;   
   console.log('post id  : '+postId );
   console.log('comment id  : '+commentId );
+  let cData =null;
   let commentDelete = await deleteCommentDBController(postId,commentId);
      if(commentDelete){
          console.log('comment deleted successfully');
@@ -18,6 +19,7 @@ module.exports = async function (req, res, next) {
        cData = JSON.parse(JSON.stringify(commentData));
        console.log(cData);
      }
+     console.log("Comment Data",cData);
      res.json(cData);         
 }
 
